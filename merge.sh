@@ -1,9 +1,6 @@
 #!/bin/bash
 
 # Merges the target branch into current branch
-#
-# https://gist.github.com/tmiller/5222478
-# https://stackoverflow.com/questions/402377/using-getopts-to-process-long-and-short-command-line-options
 
 current_branch() {
   git symbolic-ref --short HEAD
