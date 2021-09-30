@@ -8,7 +8,6 @@ current_branch() {
 
 saved_branch=$(current_branch)
 
-git add .
 git commit -m "$1" -m "--story=0" --no-verify
 
 echo "commit ${saved_branch} done"
