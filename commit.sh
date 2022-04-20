@@ -7,7 +7,14 @@ current_branch() {
 }
 
 saved_branch=$(current_branch)
+storyid="${saved_branch##*_}"
+re='^[0-9]+$'
 
-git commit -m "$1" -m "--story=0" $2
+# if storyid is not a number , then set to 0
+if ! [[ $storyid =~ $re ]] ; then
+   storyid="0"
+fi
 
-echo "commit ${saved_branch} done"
+git commit -m "$1" -m "--story=${storyid}" $2
+
+echo "commit ${saved_branch} with storyid:${storyid} done"
