@@ -19,7 +19,7 @@ if ! [[ $tapdid =~ $re ]] ; then
 fi
 
 # if msg has fix keyword , then change to bug
-if [[ $1 =~ $fixkeyword]] ; then
+if [[ $1 =~ $fixkeyword ]] ; then
     suffix="bug"
 fi
 
