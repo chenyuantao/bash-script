@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Merges the target branch into current branch
+# Echo current repo's git url
 
 url=$(git remote -v | grep -P ':(.*)\.git' -o -m 1)
 k1="g"
